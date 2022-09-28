@@ -23,7 +23,7 @@ OBJ := $(patsubst $(SRC_FOLDER)/%.cpp, $(OUT_FOLDER)/%.o, $(SRC))
 all : $(EXEC)
 
 .PHONY: build
-build: $(EXEC) clear_objects
+build: $(EXEC)
 
 .PHONY: clean
 clean : 
