@@ -3,6 +3,7 @@
 
 #include "manip_nombre.hpp"
 #include "tennis.hpp"
+#include "console_saisies.hpp"
 
 int main(int argc, char *argv[])
 {
