@@ -27,6 +27,9 @@ void main_part_two()
     
 	int scores[] = { 0, 0 };
 
+	display_player_score(1, scores[0]);
+	display_player_score(2, scores[1]);		
+
 	do {
 		std::cout << "Qui a gagné cet échange ? \nEntrez : \n 1 pour le joueur 1,\n 2 pour le joueur 2" << std::endl;
 
