@@ -7,5 +7,8 @@ void hello_name();
 void hello_names();
 // III.2.1
 void more_or_less();
+// III.2.3 bonus
+void more_or_less_computer();
+
 
 #endif

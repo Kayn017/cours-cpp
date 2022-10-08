@@ -48,7 +48,7 @@ void print_array(const int array[], std::size_t size)
     }
 }
 
-void bubble_sort(int array[], std::size_t size)
+void bubble_sort(int array[], std::size_t size, int order = ASCENDING)
 {
 	for(std::size_t i = size; i > 0; i--)
 	{
@@ -56,7 +56,12 @@ void bubble_sort(int array[], std::size_t size)
 
 		for(std::size_t j = 0; j < i - 1; j++)
 		{
-			if(array[j] > array[j + 1]) 
+			if(order == ASCENDING && array[j] > array[j + 1]) 
+			{
+				swap(array[j], array[j + 1]);
+				sorted = false;
+			}
+			else if(order == DESCENDING && array[j] < array[j + 1]) 
 			{
 				swap(array[j], array[j + 1]);
 				sorted = false;

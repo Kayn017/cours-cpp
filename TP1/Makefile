@@ -2,7 +2,7 @@
 
 # compiler options
 CXX = g++
-CFLAGS = -Wall -fsanitize=address
+CFLAGS = -Wall -fsanitize=address -O3
 # linker options
 LD = g++
 LDFLAGS = -Wall -fsanitize=address

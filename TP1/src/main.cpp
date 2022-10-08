@@ -7,17 +7,48 @@
 
 void main_part_one()
 {
-	std::size_t size = 10;
+	std::cout << "Renseignez la taille du tableau : " << std::endl;
+
+	std::size_t size;
+
+	std::cin >> size;
+
+	if(size < 0)
+	{
+		std::cerr << "Merci de rentrer une taille valide." << std::endl;
+		return;
+	}
+	
 	int array[size];
 
 	generate_int_random(size, array);
 
-	std::cout << " *** Random array ***" << std::endl;
+	std::cout << " *** Tableau aléatoire ***" << std::endl;
 	print_array(array, size);
 
-	bubble_sort(array, size);
+	int order = ASCENDING;
 
-	std::cout << " *** Sorted array ***" << std::endl;
+	std::cout << "Dans quel ordre voulez vous trier ce tableau ? " << std::endl;
+	std::cout << "0 - Croissant (par défaut) " << std::endl;
+	std::cout << "1 - Décroissant " << std::endl;
+
+	std::cin >> order;
+
+	if(order < 0 || order > 1)
+	{
+		std::cerr << "Merci de rentrer un ordre valide." << std::endl;
+		return;
+	}
+
+	bubble_sort(array, size, order);
+
+	std::cout << " *** Tableau trié ***" << std::endl;
+	print_array(array, size);
+
+	// I.1.4 bonus 2
+	bubble_sort(array, size, !order);
+
+	std::cout << " *** Tableau trié inverse ***" << std::endl;
 	print_array(array, size);
 }
 
@@ -55,6 +86,7 @@ void main_part_three()
 {
 	hello_names();
 	more_or_less();
+	more_or_less_computer();
 }
 
 int main(int argc, char *argv[])

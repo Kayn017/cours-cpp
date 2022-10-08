@@ -13,6 +13,10 @@ void sum_three_parameters_reference(int a, int b, int &sum);
 // I.1.4
 void generate_int_random(std::size_t size, int array[]);
 void print_array(const int array[], std::size_t size);
-void bubble_sort(int array[], std::size_t size);
+void bubble_sort(int array[], std::size_t size, int order);
+
+// I.1.4 Bonus 2
+#define DESCENDING 1
+#define ASCENDING 0
 
 #endif
