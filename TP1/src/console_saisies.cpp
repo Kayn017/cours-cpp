@@ -79,11 +79,13 @@ void more_or_less_computer()
 	std::cout << "Je vais vous dire à quel nombre je pense" << std::endl;
 	std::cout << "et dites moi si le nombre est celui auquel vous pensez, si c'est + ou -." << std::endl;
 	
-	int nb_tries = 0, guess = 500, offset = guess / 2;
+	int nb_tries = 0, guess_min = 0, guess_max = 1000;
 	std::string response;
 
 	do
 	{
+		int guess = (guess_max - guess_min) / 2 + guess_min;
+
 		std::cout << "Je pense au nombre " << guess << "." << std::endl;
 		std::cout << "Est ce que ce nombre est le bon ?" << std::endl;
 		std::cout << "+ : je pense a un nombre supérieur" << std::endl;
@@ -93,14 +95,10 @@ void more_or_less_computer()
 		std::cin >> response;
 
 		if(response == "+")
-			guess += offset;
+			guess_min = guess;
 		
 		else if(response == "-")
-			guess -= offset;
-		
-		
-		if(offset > 1)
-			offset /= 2;
+			guess_max = guess;
 
 		nb_tries++;
 
