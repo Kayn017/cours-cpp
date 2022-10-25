@@ -9,6 +9,10 @@ Triangle::Triangle(Point a, Point b, Point c)
     this->c = c;
 }
 
+// destructor 
+Triangle::~Triangle()
+{}
+
 // getters
 Point Triangle::GetPointA() const
 {

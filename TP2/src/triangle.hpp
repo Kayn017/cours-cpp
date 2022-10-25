@@ -10,6 +10,8 @@ class Triangle
     public:
         // constructors
         Triangle(Point a, Point b, Point c);
+        // destructors
+        ~Triangle();
         // getters
         inline Point GetPointA() const;
         inline Point GetPointB() const;

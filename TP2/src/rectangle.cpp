@@ -19,6 +19,10 @@ Rectangle::Rectangle(int length, int width, Point corner): length(length), width
     this->topLeftCorner.y = corner.y;
 }
 
+// destructor
+Rectangle::~Rectangle()
+{}
+
 // getters
 int Rectangle::GetLength() const
 {
@@ -60,4 +64,9 @@ int Rectangle::Perimeter() const
 float Rectangle::Area() const
 {
     return this->length * this->width;
+}
+
+void Rectangle::Afficher() 
+{
+    // this->GetTopLeftCorner().Distance(Point{});
 }

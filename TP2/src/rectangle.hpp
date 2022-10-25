@@ -10,6 +10,8 @@ class Rectangle
         Rectangle();
         Rectangle(int length, int width);
         Rectangle(int length, int width, Point point);
+        //destructor
+        ~Rectangle();
         // getters
         inline int GetLength() const;
         inline int GetWidth() const;
@@ -21,6 +23,7 @@ class Rectangle
         // functions
         inline int Perimeter() const;
         inline float Area() const;
+        void Afficher();
 
     private:
         int length;

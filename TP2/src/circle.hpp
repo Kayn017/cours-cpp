@@ -3,6 +3,8 @@
 
 #include "point.hpp"
 
+// M_PI n'est pas forcément dispo sous windows
+// Dans le doute, je redéfinis ici
 #ifndef M_PI
 #define M_PI 3.14159265358979323846
 #endif // M_PI
@@ -13,6 +15,8 @@ class Circle
         // constructors
         Circle(int diameter);
         Circle(int diameter, Point center);
+        // destructors
+        ~Circle();
         // getters
         inline int GetDiameter() const;
         inline Point GetCenter() const;

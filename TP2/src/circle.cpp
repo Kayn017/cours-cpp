@@ -11,6 +11,10 @@ Circle::Circle(int diameter, Point center): diameter(diameter)
     this->center.y = center.y;
 }
 
+// destructors
+Circle::~Circle() 
+{}
+
 // getters
 int Circle::GetDiameter() const
 {
