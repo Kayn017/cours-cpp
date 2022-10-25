@@ -23,38 +23,6 @@ Rectangle::Rectangle(int length, int width, Point corner): length(length), width
 Rectangle::~Rectangle()
 {}
 
-// getters
-int Rectangle::GetLength() const
-{
-    return this->length;
-} 
-
-int Rectangle::GetWidth() const
-{
-    return this->width;
-} 
-
-Point Rectangle::GetTopLeftCorner() const
-{
-    return this->topLeftCorner;
-}
-
-// setters
-void Rectangle::SetLength(int length)
-{
-    this->length = length;
-}
-
-void Rectangle::SetWidth(int width)
-{
-    this->width = width;
-}
-
-void Rectangle::SetTopLeftCorner(Point topLeftCorner)
-{
-    this->topLeftCorner = topLeftCorner;
-}
-
 // functions
 int Rectangle::Perimeter() const
 {
@@ -64,9 +32,4 @@ int Rectangle::Perimeter() const
 float Rectangle::Area() const
 {
     return this->length * this->width;
-}
-
-void Rectangle::Afficher() 
-{
-    // this->GetTopLeftCorner().Distance(Point{});
 }

@@ -18,16 +18,17 @@ class Circle
         // destructors
         ~Circle();
         // getters
-        inline int GetDiameter() const;
-        inline Point GetCenter() const;
+        // getters
+        inline int GetDiameter() const { return this->diameter; }
+        inline Point GetCenter() const { return this->center; }
         // setters
-        void SetDiameter(int diameter);
-        void SetCenter(const Point &center);
+        inline void SetDiameter(int diameter) { this->diameter = diameter; }
+        inline void SetCenter(const Point &center) { this->center = center; }
         // functions
-        inline float Perimeter() const;
-        inline float Area() const;
-        inline bool OnCircle(const Point &point) const;
-        inline bool InsideCircle(const Point &point) const;
+        float Perimeter() const;
+        float Area() const;
+        bool OnCircle(const Point &point) const;
+        bool InsideCircle(const Point &point) const;
 
     private:
         int diameter;

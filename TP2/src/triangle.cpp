@@ -13,34 +13,6 @@ Triangle::Triangle(Point a, Point b, Point c)
 Triangle::~Triangle()
 {}
 
-// getters
-Point Triangle::GetPointA() const
-{
-    return this->a;
-}
-Point Triangle::GetPointB() const
-{
-    return this->b;
-}
-Point Triangle::GetPointC() const
-{
-    return this->c;
-}
-
-// setters
-void Triangle::SetPointA(Point a)
-{
-    this->a = a;
-}
-void Triangle::SetPointB(Point b)
-{
-    this->b = b;
-}
-void Triangle::SetPointC(Point c)
-{
-    this->c = c;
-}
-
 // functions
 std::array<float, 3> Triangle::Lengths() const
 {

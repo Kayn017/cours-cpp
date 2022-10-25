@@ -13,16 +13,16 @@ class Triangle
         // destructors
         ~Triangle();
         // getters
-        inline Point GetPointA() const;
-        inline Point GetPointB() const;
-        inline Point GetPointC() const;
+        inline Point GetPointA() const { return this->a; }
+        inline Point GetPointB() const { return this->b; }
+        inline Point GetPointC() const { return this->c; }
         // setters
-        inline void SetPointA(Point a);
-        inline void SetPointB(Point b);
-        inline void SetPointC(Point c);
+        inline void SetPointA(const Point &a) { this->a = a; }
+        inline void SetPointB(const Point &b) { this->b = b; }
+        inline void SetPointC(const Point &c) { this->c = c; }
         // functions
         float Base() const;
-        inline float Heigth() const;
+        float Heigth() const;
         float Area() const;
         std::array<float, 3> Lengths() const;
         bool Isosceles() const;

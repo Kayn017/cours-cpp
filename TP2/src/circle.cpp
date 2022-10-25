@@ -15,28 +15,6 @@ Circle::Circle(int diameter, Point center): diameter(diameter)
 Circle::~Circle() 
 {}
 
-// getters
-int Circle::GetDiameter() const
-{
-    return this->diameter;
-}
-
-Point Circle::GetCenter() const
-{
-    return this->center;
-}
-
-// setters
-void Circle::SetDiameter(int diameter)
-{
-    this->diameter = diameter;
-}
-
-void Circle::SetCenter(const Point &center)
-{
-    this->center = center;
-}
-
 // functions
 float Circle::Perimeter() const
 {

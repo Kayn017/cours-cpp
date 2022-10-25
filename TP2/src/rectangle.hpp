@@ -13,16 +13,16 @@ class Rectangle
         //destructor
         ~Rectangle();
         // getters
-        inline int GetLength() const;
-        inline int GetWidth() const;
-        inline Point GetTopLeftCorner() const;
+        inline int GetLength() const { return this->length; } 
+        inline int GetWidth() const { return this->width; } 
+        inline Point GetTopLeftCorner() const { return this->topLeftCorner; }
         // setters
-        inline void SetLength(int length);
-        inline void SetWidth(int width);
-        inline void SetTopLeftCorner(Point topLeftCorner);
+        inline void SetLength(int length) { this->length = length; }
+        inline void SetWidth(int width) { this->width = width; }
+        inline void SetTopLeftCorner(const Point &topLeftCorner) { this->topLeftCorner = topLeftCorner; }
         // functions
-        inline int Perimeter() const;
-        inline float Area() const;
+        int Perimeter() const;
+        float Area() const;
         void Afficher();
 
     private:
