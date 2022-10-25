@@ -29,7 +29,8 @@ class Circle
         float Area() const;
         bool OnCircle(const Point &point) const;
         bool InsideCircle(const Point &point) const;
-
+        // display
+        void Display();
     private:
         int diameter;
         Point center;

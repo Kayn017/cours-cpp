@@ -23,7 +23,8 @@ class Rectangle
         // functions
         int Perimeter() const;
         float Area() const;
-        void Afficher();
+        // display
+        void Display();
 
     private:
         int length;

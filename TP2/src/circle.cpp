@@ -1,5 +1,6 @@
 #include "circle.hpp"
 #include <math.h>
+#include <iostream>
 
 // constructors
 Circle::Circle(int diameter): diameter(diameter)
@@ -34,4 +35,16 @@ bool Circle::OnCircle(const Point &point) const
 bool Circle::InsideCircle(const Point &point) const
 {
     return this->center.Distance(point) < (this->diameter / 2);
+}
+
+void Circle::Display() 
+{
+    std::cout << "Diameter : " << this->diameter << std::endl;
+
+    std::cout << " --- Center ---" << std::endl;
+    this->center.Display(); 
+    std::cout << " --- Center end ---" << std::endl;
+
+    std::cout << "Perimeter : " << this->Perimeter() << std::endl;
+    std::cout << "Area : " << this->Area() << std::endl;
 }

@@ -28,7 +28,8 @@ class Triangle
         bool Isosceles() const;
         bool Rectangle() const;
         bool Equilateral() const;
-
+        // display
+        void Display();
     private:
         Point a;
         Point b;

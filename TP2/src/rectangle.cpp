@@ -1,4 +1,5 @@
 #include "rectangle.hpp"
+#include <iostream>
 
 // constructors
 Rectangle::Rectangle(): length(0), width(0), topLeftCorner( )
@@ -32,4 +33,15 @@ int Rectangle::Perimeter() const
 float Rectangle::Area() const
 {
     return this->length * this->width;
+}
+
+void Rectangle::Display()
+{
+    std::cout << "Length : " << this->length << std::endl;
+    std::cout << "Width : " << this->width << std::endl;
+    std::cout << " --- topLeftCorner ---" << std::endl;
+    this->topLeftCorner.Display();
+    std::cout << " --- topLeftCorner end ---" << std::endl;
+    std::cout << "Perimeter : " << this->Perimeter() << std::endl;
+    std::cout << "Area : " << this->Area() << std::endl;
 }

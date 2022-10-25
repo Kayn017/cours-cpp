@@ -1,5 +1,6 @@
 #include "triangle.hpp"
 #include <math.h>
+#include <iostream>
 
 // constructor
 Triangle::Triangle(Point a, Point b, Point c)
@@ -87,4 +88,23 @@ bool Triangle::Rectangle() const
         std::pow(lengths[1], 2) == (std::pow(lengths[0], 2) + std::pow(lengths[2], 2)) ||
         std::pow(lengths[2], 2) == (std::pow(lengths[1], 2) + std::pow(lengths[0], 2))
     );
+}
+
+void Triangle::Display()
+{
+    std::cout << " --- Point a ---" << std::endl;
+    this->a.Display();
+    std::cout << " --- Point a end ---" << std::endl;
+    std::cout << " --- Point b ---" << std::endl;
+    this->b.Display();
+    std::cout << " --- Point b end ---" << std::endl;
+    std::cout << " --- Point c ---" << std::endl;
+    this->c.Display();
+    std::cout << " --- Point c end ---" << std::endl;
+
+    std::cout << "Base : " << this->Base() << std::endl;
+    std::cout << "Heigth : " << this->Heigth() << std::endl;
+    std::cout << "Isosceles : " << this->Isosceles() << std::endl;
+    std::cout << "Rectangle : " << this->Rectangle() << std::endl;
+    std::cout << "Equilateral : " << this->Equilateral() << std::endl;
 }
