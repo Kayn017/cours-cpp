@@ -23,6 +23,8 @@ class Rectangle
         // functions
         int Perimeter() const;
         float Area() const;
+        bool HasALargerPerimeterThan(const Rectangle &rectangle);
+        bool HasALargerAreaThan(const Rectangle &rectangle);
         // display
         void Display();
 
