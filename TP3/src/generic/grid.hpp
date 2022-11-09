@@ -13,8 +13,11 @@ class Grid
         Grid(const std::size_t nb_lines, const std::size_t nb_columns, const int nb_cases_to_align);
         // destructor
         ~Grid();
-        // methods
+        // getters
+        inline int getNbLines() { return this->nb_lines; };
+        inline int getNbColumns() { return this->nb_columns; };
         inline Token getValue(const int line, const int column) { return this->grid[line][column]; }
+        // methods
         virtual bool canPlace(const int line, const int column);
         virtual bool place(const int line, const int column, const Token& token);
         bool checkLineAlignment(const int line, const Token& token);
@@ -24,7 +27,7 @@ class Grid
         bool checkDiagonalAlignment(const int line, const int column, const Token& token);
         bool checkAlignment(const int line, const int column, const Token& token);
         void display();
-    private:
+    protected:
         std::vector<std::vector<Token>> grid;
 
         int nb_lines;

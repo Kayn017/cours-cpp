@@ -65,12 +65,12 @@ bool Grid::checkTopLeftToBottomRightAlignment(const int line, const int column, 
 {
     int nb_token = 0;
 
-    for(int i = -this->nb_cases_to_align; i < this->nb_cases_to_align; i++)
+    for(int i = -(this->nb_cases_to_align - 1); i < this->nb_cases_to_align; i++)
     {
         if(line + i < 0) 
             continue;
 
-        if(this->grid[line + this->nb_cases_to_align][column + this->nb_cases_to_align] != token)
+        if(this->grid[line + i][column + i] != token)
         {
             nb_token = 0; 
             continue;
@@ -89,12 +89,15 @@ bool Grid::checkTopRightToBottomLeftAlignment(const int line, const int column, 
 {
     int nb_token = 0;
 
-    for(int i = -this->nb_cases_to_align; i < this->nb_cases_to_align; i++)
+    for(int i = -(this->nb_cases_to_align - 1); i < this->nb_cases_to_align; i++)
     {
         if(line + i < 0) 
             continue;
 
-        if(this->grid[line + this->nb_cases_to_align][column - this->nb_cases_to_align] != token)
+        if(column - i < 0)
+            continue;
+
+        if(this->grid[line + i][column - i] != token)
         {
             nb_token = 0; 
             continue;
@@ -111,8 +114,8 @@ bool Grid::checkTopRightToBottomLeftAlignment(const int line, const int column, 
 
 bool Grid::checkDiagonalAlignment(const int line, const int column, const Token& token)
 {
-    return this->checkTopRightToBottomLeftAlignment(line, column, token) || 
-        this->checkTopLeftToBottomRightAlignment(line, column, token); 
+    return this->checkTopLeftToBottomRightAlignment(line, column, token) || 
+        this->checkTopRightToBottomLeftAlignment(line, column, token); 
 }
 
 bool Grid::checkAlignment(const int line, const int column, const Token& token)
@@ -128,7 +131,7 @@ void Grid::display()
     {
         // static cast for print enum value 
         for(Token token : line)
-            std::cout << " " << static_cast<std::underlying_type<Token>::type>(token);
+            printf(" %c", token);
 
         std::cout << std::endl;
     }

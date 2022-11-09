@@ -1,9 +1,11 @@
 #ifndef _TOKEN_H
 #define _TOKEN_H
 
-enum class Token
+enum Token
 {
-    none = ' '
+    none = ' ',
+    cross = 'X',
+    circle = 'O'
 };
 
 #endif //_TOKEN_H
