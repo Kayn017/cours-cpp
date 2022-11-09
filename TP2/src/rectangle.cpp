@@ -35,6 +35,16 @@ float Rectangle::Area() const
     return this->length * this->width;
 }
 
+bool Rectangle::HasALargerPerimeterThan(const Rectangle &rectangle)
+{
+    return this->Perimeter() == rectangle.Perimeter();
+}
+
+bool HasALargerAreaThan(const Rectangle &rectangle)
+{
+    return this->Area() == rectangle.Area();
+}
+
 void Rectangle::Display()
 {
     std::cout << "Length : " << this->length << std::endl;
